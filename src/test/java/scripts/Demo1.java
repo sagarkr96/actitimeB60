@@ -10,6 +10,6 @@ public class Demo1 extends BaseTest {
 	public void testA()
 	{
 		WebDriverManager.chromedriver().setup();
-		System.out.println("hello");
+		System.out.println("Hello git");
 	}
 }
