@@ -14,8 +14,8 @@ public class ValidLogin extends BaseTest {
 
 	@Test(priority = 1)
 	public void testValidLogin(){
-		String un=Util.getXlData(XL_PATH,"LoginData",1,0);
-		String pw=Util.getXlData(XL_PATH,"LoginData",1,1);
+		String un=Util.getXlData(XL_PATH,"ValidLogin",1,0);
+		String pw=Util.getXlData(XL_PATH,"ValidLogin",1,1);
 		
 //		1. Enter valid user name
 		LoginPage loginPage=new LoginPage(driver,test);
