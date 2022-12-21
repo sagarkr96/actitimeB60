@@ -11,7 +11,7 @@ import page.LoginPage;
 
 public class InvalidLogin extends BaseTest {
 
-	@Test
+	@Test(priority = 2)
 	public void testInvalidLogin()
 	{
 		//read from Excel file
