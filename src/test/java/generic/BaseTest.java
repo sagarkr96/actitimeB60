@@ -27,15 +27,12 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public abstract class BaseTest implements IAutoConst{
 	public static ExtentReports extent;
 	
 	public WebDriver driver;
 	public WebDriverWait wait;
 	public ExtentTest test;
-	
-	public final String PPT_PATH="base.properties";
-	public String REPORT_PATH="./target/Spark.html";
 	
 //	static
 //	{
@@ -108,7 +105,7 @@ public class BaseTest {
 	public void closeApp(ITestResult result) throws IOException
 	{
 		
-		int status = result.getStatus();
+		int status = result.getStatus();//1-PASS 2-FAILED
 		if(status==2)
 		{
 			String errDetails = result.getThrowable().getMessage();
