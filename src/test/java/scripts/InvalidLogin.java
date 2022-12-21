@@ -1,6 +1,7 @@
 package scripts;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
@@ -30,7 +31,9 @@ public class InvalidLogin extends BaseTest {
 		
 		//4.verify error msg is displayed
 		EnterTimeTrackPage ettPage=new EnterTimeTrackPage(driver, test);
-		ettPage.verifyHomePageIsDisplayed(wait);
+		boolean result = ettPage.verifyHomePageIsDisplayed(wait);
+		Assert.assertTrue(result, "Home page is not displayed");
+		
 		
 		
 	}
