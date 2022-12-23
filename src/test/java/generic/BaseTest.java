@@ -104,7 +104,6 @@ public abstract class BaseTest implements IAutoConst{
 	@AfterMethod
 	public void closeApp(ITestResult result) throws IOException
 	{
-		
 		int status = result.getStatus();//1-PASS 2-FAILED
 		if(status==2)
 		{
