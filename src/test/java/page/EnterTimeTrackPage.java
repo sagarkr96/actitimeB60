@@ -16,6 +16,12 @@ public class EnterTimeTrackPage {
 	@FindBy(id="logoutLink")
 	private WebElement logoutLink;
 	
+	@FindBy(xpath = "(//div[@class='menu_icon'][1])[2]")
+	private WebElement settings;
+	
+	@FindBy(xpath = "//a[text()='Types of Work']")
+	private WebElement typesOfWork;
+	
 	public EnterTimeTrackPage(WebDriver driver,ExtentTest test) {
 		PageFactory.initElements(driver, this);
 		this.test=test;
@@ -33,6 +39,17 @@ public class EnterTimeTrackPage {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public void clickSettings()
+	{
+		settings.click();
+		test.log(LogStatus.INFO, "click on the settings");
+	}
+	public void selectTypesOfWork()
+	{
+		typesOfWork.click();
+		test.log(LogStatus.INFO, "select types of work under settings");
 	}
 	
 }
